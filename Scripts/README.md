@@ -7,3 +7,5 @@ Read list
 - Variables
 - User Input
 - Arrays
+- Array Slicing
+- Arithmetic Operators
