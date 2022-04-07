@@ -9,3 +9,6 @@ Read list
 - Arrays
 - Array Slicing
 - Arithmetic Operators
+- Logical Operators 
+- If-Than-Else Conditionals
+- Switch Case
