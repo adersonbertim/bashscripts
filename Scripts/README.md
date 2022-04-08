@@ -12,3 +12,4 @@ Read list
 - Logical Operators 
 - If-Than-Else Conditionals
 - Switch Case
+- Loops For-While-Until
