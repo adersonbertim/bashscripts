@@ -7,12 +7,12 @@ start=0
 while [ $start -lt 10 ]
 do
   echo $start 
-  if [ $start -eq 5 ]
+  if [ $start -eq 8 ]
   then 
-    break
+    break  # This is a word used to break of course this loop 
   elif (($start == 1))
   then 
-    echo "O valor obtido é 1"
+    echo "This value 1"
   fi
   start=`expr $start + 1`
 done
