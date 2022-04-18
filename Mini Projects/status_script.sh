@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# This is a script based on E-book in readme, so this script return the current server status 
-# In this script i fail to found CPU LOAD Average, but i fell faled to solve this but anyway
+# This is a script based on E-book in readme, so this script return the current server status.
+# In this script i fail to found CPU LOAD Average, but i fell failed to solve this but anyway.
 
 
 server_name=$(hostid)
@@ -58,5 +58,3 @@ function all_functions (){
 }
 
 all_functions
-
-
