@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 # This is a script based on E-book in readme, so this script return the current server status.
-# In this script i fail to found CPU LOAD Average, but i fell failed to solve this but anyway.
-
 
 server_name=$(hostid)
 
@@ -57,4 +55,49 @@ function all_functions (){
   processes_user
 }
 
-all_functions
+#all_functions
+
+# Adding colors
+green='\e[32m'
+blue='\e[34m'
+clear='\e[0m'
+
+# Color functions
+ColorGreen (){
+  echo -ne $green$1$clear
+}
+
+ColorBlue (){
+  echo -ne $blue$1$clear
+}
+
+# Adding menu function
+menu() { 
+  echo -ne "
+  Menu Options
+  $(ColorGreen '1)') Memory Usage
+  $(ColorGreen '2)') CPU LOAD
+  $(ColorGreen '3)') Operetional System 
+  $(ColorGreen '4)') Kernel version
+  $(ColorGreen '5)') Architecture
+  $(ColorGreen '6)') Processes User 
+  $(ColorGreen '7)') Check all 
+  $(ColorGreen '8)') Exit
+  $(ColorBlue 'Choose an option:')"
+# The flags -ne is n -> not append new line | e -> enale backslash scapes interpretation 
+    read a
+    case $a in
+      1) memory_check ; menu ;;
+      2) cpu_usage ; menu;;
+      3) os_name ; menu ;;
+      4) kernel_version ; menu ;;
+      5) architecture ; menu ;;
+      6) processes_user ; menu ;;
+      7) all_functions ; menu ;;
+      8) exit 0 ;;
+      *) echo -e $red"Wrong Option."$clear; 
+        WrongCommand ;;
+    esac
+}
+
+menu
